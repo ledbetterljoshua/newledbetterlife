@@ -3,9 +3,8 @@ $(function(){
 		$(".alert").slideUp()
 	});
 });
+
 $(function(){$("input#social_facebook").attr("id", "");$("input#social_twitter").attr("id", "");});
-
-
 
 
 function bannerImg() {
