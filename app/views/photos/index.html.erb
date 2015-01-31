@@ -1,0 +1,25 @@
+<section class="screenshots" id="screenshots">
+  <div class="container-fluid">
+    <div class="row">
+      <ul class="grid">
+        <% @photos.each do |photo| %>
+        <li>
+          <figure>
+            <%= image_tag photo.image.url(:original, timestamp: false) %>
+            <figcaption>
+            <div class="caption-content">
+                <i class="fa fa-search"></i><br>
+                <p><%= truncate(" #{photo.description} ", :length => 35) %></p>
+            </div>
+            <% if user_signed_in? %>
+            <p><%= link_to "edit", edit_photo_path(photo), :class => "editPhoto" %></p>
+            <% end %>
+            </figcaption>
+            
+          </figure>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

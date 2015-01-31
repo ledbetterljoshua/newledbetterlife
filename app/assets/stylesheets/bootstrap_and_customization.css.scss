@@ -1,0 +1,62 @@
+@import 'bootstrap';
+$body-bg: #ecf0f1;
+$navbar-inverse-bg: #27ae60;
+$navbar-inverse-link-color: white;
+$brand-primary: #f39c12;
+$jumbotron-bg: #bdc3c7;
+
+.panel.panel-default {
+max-width: 380px;
+margin: 50px auto;
+}
+input#user_remember_me {
+position: relative;
+left: 19px;
+bottom: 2px;
+}
+.panel-title, .panel-heading h1 {
+text-align: center;
+font-weight: 100;
+text-transform: uppercase;
+letter-spacing: 3px;
+}
+.alert {
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;
+text-align: center;
+padding-top: 20px;
+font-family: monospace;
+font-size: 16px;
+letter-spacing: 2px;
+}
+h1#closeAlert {
+font-size: 18px;
+border-radius: 100%;
+border: 1px solid;
+width: 26px;
+text-align: center;
+padding: 1px;
+cursor: pointer;
+display: inline-block;
+float: right;
+position: relative;
+top: -70px;
+-web-kit-transition:all .3s ease-in-out;
+-moz-transition:all .3s ease-in-out;
+transition:all .3s ease-in-out;
+}
+h1#closeAlert:hover {
+	color: #fff;
+	background: #000;
+}
+.collapse.navbar-collapse.navbar-ex1-collapse {
+padding: .8em;
+}
+a.navbar-brand {
+padding-top: 1.5em;
+}
+.navbar {
+	margin-bottom:0px;
+}
+.navbar {margin-top:0;}

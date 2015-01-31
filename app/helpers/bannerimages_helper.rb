@@ -1,0 +1,2 @@
+module BannerimagesHelper
+end

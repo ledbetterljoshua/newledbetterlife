@@ -1,0 +1,19 @@
+<section class="features-list" id="features">
+<h1 class="titlers">Check out some of my most recent posts</h1>
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12">
+			<% @posts.each do |post| %>
+			<div class="col-md-4 feature-1 wp2 animated fadeInDown">
+				<div class="feature-content">
+					<h1><%= post.title %></h1>
+					<p><%= truncate(" #{post.description} ", :length => 205) %></p>
+					<%= link_to 'Read More', post %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+</section>

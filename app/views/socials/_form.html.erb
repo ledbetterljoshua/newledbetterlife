@@ -1,0 +1,31 @@
+
+
+<%= form_for(@social) do |f| %>
+  <% if @social.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@social.errors.count, "error") %> prohibited this social from being saved:</h2>
+
+      <ul>
+      <% @social.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook, :value => "http://" %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter, :value => "http://" %>
+  </div>
+  <div class="field">
+    <%= f.label :instagram %><br>
+    <%= f.text_field :instagram, :value => "http://" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

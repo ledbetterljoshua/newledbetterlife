@@ -1,0 +1,60 @@
+<style type="text/css">
+.navbar {
+margin-bottom: 0px;
+position: fixed;
+z-index: 999;
+width: 100%;
+}
+.editAbout {
+color: #fff;
+border: 1px solid;
+padding: 1px 8px;
+border-radius: 4px;
+position: relative;
+}
+footer {
+	display: none;
+}
+</style>
+
+<div class="main-container">
+	
+<div class="profile-container" style="min-width: 0px; height: 987px;">
+		<div class="background-container left" style="width: 100%;">
+			<div class="background">
+				<img src="https://scontent-b-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1512427_768590343154746_1063757970_n.jpg?oh=7795295d40d6d0ce5040e80e64b4ac65&oe=5557858B" class="background-image" alt="">
+			</div>
+    <% @about_mes.each do |about_me| %>			
+			<div class="profile" id="profile_box" itemscope="itemscope" itemtype="http://schema.org/Person" style="-webkit-transition: none; transition: none; opacity: 0.864; background-color: rgba(5, 5, 5, 0.598039);">
+				<div class="profile-head" style="width: auto;">
+					<h1 class="name" itemprop="name" style="font-size: 33px;">Joshua Ledbetter</h1>
+					<h2 class="headline" style="font-size: 13px;">
+					<%= about_me.title %></h2>
+
+
+
+				</div>
+				<div class="profile-content clearfix" >
+					<!--feature video Embed-->
+					<div class="featured invisible">
+					</div>
+					<div class="bio-container clearfix">
+						<div class="profile_photo invisible"></div>
+						<div class="bio clearfix"><p>
+						<%= h(about_me.description).gsub(/\n/, '<br/>').html_safe %>
+						</p></div>
+					</div>
+
+					<div class="bevel bevel-services" style="opacity: 0.3;"><hr></div>
+					<% if user_signed_in? %>
+					<%= link_to 'Edit', edit_about_me_path(about_me), :class => "editAbout" %>
+					<% end %>
+<% end %>
+				</div>
+
+				
+				</div>
+			</div><!-- /profile -->
+		</div><!--/end background-container-->
+	</div>
+</div>
