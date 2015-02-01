@@ -241,6 +241,17 @@ body article.page .content h2.description {
 body article.page .content p:last-child {
   margin-bottom: 3em;
 }
+.download-btn {
+display: inline-block;
+padding: 18px 46px;
+border: 2px solid grey;
+border-radius: 3px;
+color: black;
+font-size: 16px;
+}
+.download {
+  background: #fff;
+}
 </style>
 
   <!-- Page. --> 
@@ -264,11 +275,26 @@ body article.page .content p:last-child {
 					<%= h(@post.description).gsub(/\n/, '<br/>').html_safe %></p></div>
 				<%= link_to 'Edit', edit_post_path(@post) %> |
 			</div>
+<section class="download" id="download">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center wp4">
 
+        <%= link_to "Back to the beginning", @post.first, :class => "download-btn first" %>
+
+        <%= link_to "Continue", @post.next, :class => "download-btn next" %>
+
+        <%= link_to "Last", @post.last, :class => "download-btn last" %>
+
+      </div>
+    </div>
+  </div>
+</section>
 		</article>
 
 <script type="text/javascript">
 if ($(".big-image").attr("style") == "background-image: url(/images/original/missing.png);") {
 $(".big-image, body article.page .big-image").css("height", "100px");
 }
+postControls()
 </script>
