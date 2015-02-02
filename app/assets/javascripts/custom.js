@@ -15,17 +15,17 @@ $("div#banner").attr("style", "background-image: url(\" " + imageSrc + "\");")
 function postControls() {
 	var currnetLocation = location.pathname;
 	var next = $("a.download-btn.next").attr("href");
-	var last = $("a.download-btn.last").attr("href");
 	var first = $("a.download-btn.first").attr("href");
-	$("a.download-btn.last").hide();
+	var last = $("a.download-btn.last").attr("href");
+	$("a.download-btn.first").hide();
 
 	if (currnetLocation == last) {
-	 $("a.download-btn.next").hide();
-	 $("a.download-btn.first").show();
-	} else if ( currnetLocation == first) {
 	 $("a.download-btn.next").show();
-	 $("a.download-btn.first").hide();
-	}
+	 $("a.download-btn.last").hide();
+	} else if ( currnetLocation == first) {
+	 $("a.download-btn.next").hide();
+	 $("a.download-btn.last").show();
+	} 
 }
 
 var lastScrollTop = 0;

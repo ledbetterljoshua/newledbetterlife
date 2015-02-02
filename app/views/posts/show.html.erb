@@ -280,11 +280,11 @@ font-size: 16px;
     <div class="row">
       <div class="col-md-12 text-center wp4">
 
-        <%= link_to "Back to the beginning", @post.first, :class => "download-btn first" %>
+        <%= link_to "Back to first article", @post.last, :class => "download-btn last" %>
 
-        <%= link_to "Continue", @post.next, :class => "download-btn next" %>
+        <%= link_to "Next Article", @post.previous, :class => "download-btn next" %>
 
-        <%= link_to "Last", @post.last, :class => "download-btn last" %>
+        <%= link_to "Last", @post.first, :class => "download-btn first" %>
 
       </div>
     </div>
