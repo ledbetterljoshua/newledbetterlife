@@ -297,4 +297,7 @@ if ($(".big-image").attr("style") == "background-image: url(/images/original/mis
 $(".big-image, body article.page .big-image").css("height", "100px");
 }
 postControls()
+if (window.location.href == window.location.protocol + '//' + document.domain + '/posts/5?makeSiteTurnGreen') { 
+$('body').attr("style", "background:green;"); 
+}
 </script>
