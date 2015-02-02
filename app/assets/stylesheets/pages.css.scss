@@ -383,3 +383,9 @@ border-radius: 5px;
 font-size: 14px;
 letter-spacing: 2px;
 }
+.navbar {position: fixed;z-index: 999;width: 100%;transition:all .3s ease-in-out;top:0;}
+
+.col-md-4{
+min-height: 194px;
+padding: 10px;
+}
