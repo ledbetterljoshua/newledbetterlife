@@ -28,19 +28,7 @@ function postControls() {
 	} 
 }
 
-/*var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       $("nav.navbar.navbar-default").attr("style", "margin-top:-74px;");
-   } else {
-      $("nav.navbar.navbar-default").attr("style", "margin-top:0px;");
-   }
-   lastScrollTop = st;
-      if (document.body.scrollTop === 0) {
-     $("nav.navbar.navbar-default").attr("style", "margin-top:0px;transition:all 0 ease-in");
-   }
-});*/
+
 
 // Hide Header on on scroll down
 var didScroll;
@@ -80,5 +68,7 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+
 
 

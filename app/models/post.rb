@@ -19,4 +19,7 @@ class Post < ActiveRecord::Base
 Post.order(:id).first
 	end
 
+	def to_param
+		"#{id} #{title}".parameterize
+	end
 end
