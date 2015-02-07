@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Joshua Ledbetter</title>
+  <title>MatterIsMental</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 <% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-#{name}") %><h1 id="closeAlert">X</h1>
 <% end %>
 <%= render 'layouts/header' %>
-<%= yield %>
-<%= render 'layouts/footer' %>
+<div class="overlay"></div>
+<div class="theContainer">
+	<%= yield %>
+	<%= render 'layouts/footer' %>
+</div>
 
 </body>
 </html>

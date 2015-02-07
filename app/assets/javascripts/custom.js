@@ -1,3 +1,5 @@
+
+
 $(function(){
 	$( "#closeAlert" ).click(function() {
 		$(".alert").slideUp()
@@ -31,6 +33,7 @@ function postControls() {
 
 
 // Hide Header on on scroll down
+
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
@@ -71,4 +74,33 @@ function hasScrolled() {
 
 
 
+/***************** Nav Transformicon ******************/
 
+/* When user clicks the Icon */
+$(function(){
+    $(".nav-toggle").click(function() {
+        $(this).toggleClass("active");
+        $(".overlay").toggleClass("texture-overlay");
+        $("ul.ulMenu").toggleClass("showUl");
+        $(".right-menu ").toggleClass("displayAll");
+        $(".theContainer").toggleClass("MoveOver");
+        $("body").toggleClass("overflowNone");
+    });
+
+    /* When user clicks a link */
+    $(".overlay ul li a").click(function() {
+        $(".nav-toggle").toggleClass("active");
+        $(".overlay-boxify").toggleClass("open");
+    });
+
+    /* When user clicks outside */
+    $(".overlay").click(function() {
+        $(".nav-toggle").toggleClass("active");
+        $(".overlay-boxify").toggleClass("open");
+        $(".overlay").toggleClass("texture-overlay");
+        $("ul.ulMenu").toggleClass("showUl");
+        $(".right-menu ").toggleClass("displayAll");
+        $(".theContainer").toggleClass("MoveOver");
+        $("body").toggleClass("overflowNone");
+    });
+});

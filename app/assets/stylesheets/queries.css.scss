@@ -38,22 +38,68 @@
 }
 
 @media screen and (max-width:640px){
-.profile div.profile-head {
-float: none;
-padding: 0 20px;
-min-width: 0;
-max-width: 840px;
-width: 100% !important;
+	.profile div.profile-head {
+	float: none;
+	padding: 0 20px;
+	min-width: 0;
+	max-width: 840px;
+	width: 100% !important;
+	}
+	div#profile_box {
+	float: left;
+	margin-top: 60%;
+	margin-left: 0px; 
+	border-radius: 5px;
+	padding: 10px;
+	max-width: 640px;
+	width: 100%;
+	background: black !important;
+	height: 100%;
+	}
 }
-div#profile_box {
-float: left;
-margin-top: 60%;
-margin-left: 0px; 
-border-radius: 5px;
-padding: 10px;
-max-width: 640px;
-width: 100%;
-background: black !important;
-height: 100%;
+
+@media screen and (max-width: 680px) {
+	.feature-content {
+		width: 100% !important;
+	}
 }
+
+@media only screen and (max-width: 680px) {
+	.wrapper {
+		width: 100%;
+		margin: 0; 
+		/* position: relative; */
+		padding: 82px 0px;
+		background: -webkit-linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+		background: -o-linear-gradient(left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+		background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+		background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
+		right: 0;
+		height: 0;
+	}
+	#banner .title {
+		margin: 0;
+		letter-spacing: 7px;
+		font-size: 2.5rem;
+		color: #fff;
+		margin-left: 0px;
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		margin-top: 0px;
+	}
+	#banner {
+		width: 100%;
+		text-align: center;
+		height: 100%;
+		display: block;
+		position: relative;
+		background-size: contain;
+	}
+	.nav-up {
+	top: 0px;
+	}
+	#banner .title { 
+		padding-top:0;
+	}
 }
